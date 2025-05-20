@@ -5,52 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sakai</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav class="header__navigation">
         <div class="menu__icon">
-          <svg width="16" height="16">
-            <use href="./images/icon.svg#icon-burger-menu"></use>
-          </svg>
+          <span class="material-symbols-outlined"> menu </span>
         </div>
         <div class="logo">
-          <p class="name-logo">SAKAI</p>
           <img
             class="logo-compani"
             src="https://images.seeklogo.com/logo-png/52/2/emblem-of-sakai-nagano-19762005-logo-png_seeklogo-527241.png"
             alt="Logo compani"
           />
+          <p class="name-logo">SAKAI</p>
         </div>
-        <div class="navigation__icon">
-          <ul class="list__icon">
-            <li class="item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-antenna"></use>
-              </svg>
-            </li>
-            <li class="item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-astronaut"></use>
-              </svg>
-            </li>
-            <li class="item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-clock"></use>
-              </svg>
-            </li>
-            <li class="item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-envelope"></use>
-              </svg>
-            </li>
-            <li class="item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-smartphone"></use>
-              </svg>
-            </li>
-          </ul>
-        </div>
+
+        <ul class="list__icon">
+          <li class="item">
+            <span class="material-symbols-outlined navigation-icon">
+              wb_sunny
+            </span>
+          </li>
+          <li class="item">
+            <span class="material-symbols-outlined navigation-icon">
+              palette
+            </span>
+          </li>
+          <li class="item">
+            <span class="material-symbols-outlined navigation-icon">
+              date_range
+            </span>
+          </li>
+          <li class="item">
+            <span class="material-symbols-outlined navigation-icon">
+              inbox
+            </span>
+          </li>
+          <li class="item">
+            <span class="material-symbols-outlined navigation-icon">
+              person
+            </span>
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -59,124 +71,132 @@
           <ul class="home__list">
             <span>HOME</span>
             <li class="home-item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-smartphone"></use>
-              </svg>
+              <span class="material-symbols-outlined sidebar-icon"> home </span>
               <span>Dashboard</span>
             </li>
           </ul>
           <ul class="ui-components__list">
             <span>UI COMPONENTS</span>
             <li class="ui-components__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-clock"></use>
-              </svg>
-              <span>Media</span>
-            </li>
-            <li class="ui-components__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-diagram"></use>
-              </svg>
+              <span class="material-symbols-outlined sidebar-icon">
+                id_card
+              </span>
               <span>Form Layot</span>
             </li>
             <li class="ui-components__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-envelope"></use>
-              </svg>
+              <span class="material-symbols-outlined sidebar-icon">
+                select_check_box
+              </span>
               <span>Input</span>
             </li>
             <li class="ui-components__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-facebook"></use>
-              </svg>
+              <span class="material-symbols-outlined sidebar-icon">
+                phone_android
+              </span>
               <span>Button</span>
             </li>
             <li class="ui-components__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-instagram"></use>
-              </svg>
+              <span class="material-symbols-outlined sidebar-icon">
+                border_all
+              </span>
               <span>Table</span>
             </li>
             <li class="ui-components__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-twitter-1"></use>
-              </svg>
+              <span class="material-symbols-outlined sidebar-icon"> list </span>
               <span>List</span>
             </li>
             <li class="ui-components__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-linkedin"></use>
-              </svg>
+              <span class="material-symbols-outlined sidebar-icon">
+                share
+              </span>
               <span>Tree</span>
             </li>
             <li class="ui-components__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-antenna"></use>
-              </svg>
+              <span class="material-symbols-outlined sidebar-icon">
+                tablet_mac
+              </span>
               <span>Panel</span>
             </li>
+            <li class="ui-components__item">
+              <span class="material-symbols-outlined sidebar-icon">
+                stack
+              </span>
+              <span>Overlay</span>
+            </li>
+            <li class="ui-components__item">
+              <span class="material-symbols-outlined sidebar-icon">
+                imagesmode
+              </span>
+              <span>Media</span>
+            </li>
+            <li class="ui-components__item">
+              <span class="material-symbols-outlined sidebar-icon"> menu </span>
+              <span>Menu</span>
+            </li>
+            <li class="ui-components__item">
+              <span class="material-symbols-outlined sidebar-icon">
+                chat_bubble
+              </span>
+              <span>Message</span>
+            </li>
+            <li class="ui-components__item">
+              <span class="material-symbols-outlined sidebar-icon">
+                draft
+              </span>
+              <span>File</span>
+            </li>
+            <li class="ui-components__item">
+              <span class="material-symbols-outlined sidebar-icon">
+                finance
+              </span>
+              <span>Chart</span>
+            </li>
+            <li class="ui-components__item">
+              <span class="material-symbols-outlined sidebar-icon">
+                calendar_today
+              </span>
+              <span>Timeline</span>
+            </li>
+            <li class="ui-components__item">
+              <span class="material-symbols-outlined sidebar-icon">
+                radio_button_unchecked
+              </span>
+              <span>Misc</span>
+            </li>
           </ul>
           <ul class="pages__list">
             <span>PAGES</span>
             <li class="pages__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-burger-menu"></use>
-              </svg>
-              <span>Landing</span>
+              <div class="pages__row">
+                <span class="material-symbols-outlined sidebar-icon">
+                  language
+                </span>
+                <span>Landing</span>
+              </div>
             </li>
             <li class="pages__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-smartphone"></use>
-              </svg>
-              <span>Auth</span>
+              <div class="pages__row">
+                <span class="material-symbols-outlined sidebar-icon">
+                  person
+                </span>
+                <span>Auth</span>
+                <span class="material-symbols-outlined submenu-icon">
+                  keyboard_arrow_down
+                </span>
+              </div>
+              <ul class="submenu">
+                <li class="submenu__item">Login</li>
+                <li class="submenu__item">Register</li>
+                <li class="submenu__item">Forgot Password</li>
+              </ul>
             </li>
             <li class="pages__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-astronaut"></use>
-              </svg>
-              <span>Crud</span>
-            </li>
-          </ul>
-          <ul class="pages__list">
-            <span>PAGES</span>
-            <li class="pages__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-burger-menu"></use>
-              </svg>
-              <span>Landing</span>
-            </li>
-            <li class="pages__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-smartphone"></use>
-              </svg>
-              <span>Auth</span>
-            </li>
-            <li class="pages__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-astronaut"></use>
-              </svg>
-              <span>Crud</span>
-            </li>
-          </ul>
-          <ul class="pages__list">
-            <span>PAGES</span>
-            <li class="pages__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-burger-menu"></use>
-              </svg>
-              <span>Landing</span>
-            </li>
-            <li class="pages__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-smartphone"></use>
-              </svg>
-              <span>Auth</span>
-            </li>
-            <li class="pages__item">
-              <svg width="16" height="16">
-                <use href="./images/icon.svg#icon-astronaut"></use>
-              </svg>
-              <span>Crud</span>
+              <div class="pages__row">
+                <span class="material-symbols-outlined sidebar-icon">
+                  edit
+                </span>
+                <span>Crud</span>
+              </div>
             </li>
           </ul>
         </div>
@@ -246,72 +266,68 @@
           <div class="box__down">
             <div class="box5">
               <div class="box5__title">Recent Sales</div>
-              <div class="box5__header">
-                <div class="">Image</div>
-                <div class="">
-                  <span>Name</span>
-                  <svg width="16" height="16">
-                    <use href="./images/icon.svg#icon-smartphone"></use>
-                  </svg>
-                </div>
-                <div class="">
-                  <span>Price</span>
-                  <svg width="16" height="16">
-                    <use href="./images/icon.svg#icon-smartphone"></use>
-                  </svg>
-                </div>
-                <div class=""><span>View</span></div>
-              </div>
-              <div class="box5__row">
-                <div><img src="./images/bamboo-watch.jpg" /></div>
-                <div class="">Bamboo Watch</div>
-                <div>$65.00</div>
-                <div>
-                  <svg width="16" height="16">
-                    <use href="./images/icon.svg#icon-smartphone"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="box5__row">
-                <div><img src="./images/black-watch.jpg" /></div>
-                <div class="">Black Watch</div>
-                <div>$72.00</div>
-                <div class="box5__svg">
-                  <svg width="16" height="16">
-                    <use href="./images/icon.svg#icon-smartphone"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="box5__row">
-                <div><img src="./images/blue-band.jpg" /></div>
-                <div class="">Blu Band</div>
-                <div>$79.00</div>
-                <div class="box5__svg">
-                  <svg width="16" height="16">
-                    <use href="./images/icon.svg#icon-smartphone"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="box5__row">
-                <div><img src="./images/blue-t-shirt.jpg" /></div>
-                <div class="">Blu T-Shirt</div>
-                <div>$29.00</div>
-                <div class="box5__svg">
-                  <svg width="16" height="16">
-                    <use href="./images/icon.svg#icon-smartphone"></use>
-                  </svg>
-                </div>
-              </div>
-              <div class="box5__row">
-                <div><img src="./images/braclet.jpg" /></div>
-                <div class="">Bracalet</div>
-                <div>$15.00</div>
-                <div class="box5__svg">
-                  <svg width="16" height="16">
-                    <use href="./images/icon.svg#icon-smartphone"></use>
-                  </svg>
-                </div>
-              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>View</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><img src="./images/bamboo-watch.jpg" /></td>
+                    <td>Bamboo Watch</td>
+                    <td>$65.00</td>
+                    <td>
+                      <span class="material-symbols-outlined search-icon">
+                        search
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./images/black-watch.jpg" /></td>
+                    <td>Black Watch</td>
+                    <td>$72.00</td>
+                    <td>
+                      <span class="material-symbols-outlined search-icon">
+                        search
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./images/blue-band.jpg" /></td>
+                    <td>Blu Band</td>
+                    <td>$79.00</td>
+                    <td>
+                      <span class="material-symbols-outlined search-icon">
+                        search
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./images/blue-t-shirt.jpg" /></td>
+                    <td>Blu T-Shirt</td>
+                    <td>$29.00</td>
+                    <td>
+                      <span class="material-symbols-outlined search-icon">
+                        search
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><img src="./images/braclet.jpg" /></td>
+                    <td>Bracalet</td>
+                    <td>$15.00</td>
+                    <td>
+                      <span class="material-symbols-outlined search-icon">
+                        search
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
               <div class="pagination">
                 <a href="#" class="page-arrow">&laquo;</a>
                 <a href="#" class="page-number active">1</a>
@@ -419,74 +435,74 @@
                 <div>⋮</div>
               </div>
               <div class="title-row">TODAY</div>
-              <div class="today-first">
+              <div class="notification-row">
                 <div class="svg-box8 bkg-blue">
                   <svg width="16" height="16">
                     <use href="./images/icon.svg#icon-smartphone"></use>
                   </svg>
                 </div>
-                <div class="today-text">
+                <div class="notification-text">
                   Richard Jones has purhased a blue T-Shirt for
                   <span>$79.00</span>
                 </div>
               </div>
               <div class="border"></div>
-              <div class="today-first">
+              <div class="notification-row">
                 <div class="svg-box8 bkg-red">
                   <svg width="16" height="16">
                     <use href="./images/icon.svg#icon-smartphone"></use>
                   </svg>
                 </div>
-                <div class="today-text">
+                <div class="notification-text">
                   Richard Jones has purhased a blue T-Shirt for
                   <span>$79.00</span>
                 </div>
               </div>
               <div class="title-row">YESTERDAY</div>
-              <div class="today-first">
+              <div class="notification-row">
                 <div class="svg-box8 bkg-blue">
                   <svg width="16" height="16">
                     <use href="./images/icon.svg#icon-smartphone"></use>
                   </svg>
                 </div>
-                <div class="today-text">
+                <div class="notification-text">
                   Richard Jones has purhased a blue T-Shirt for
                   <span>$79.00</span>
                 </div>
               </div>
               <div class="border"></div>
-              <div class="today-first">
+              <div class="notification-row">
                 <div class="svg-box8 bkg-pink">
                   <svg width="16" height="16">
                     <use href="./images/icon.svg#icon-smartphone"></use>
                   </svg>
                 </div>
-                <div class="today-text">
+                <div class="notification-text">
                   Richard Jones has purhased a blue T-Shirt for
                   <span>$79.00</span>
                 </div>
               </div>
               <div class="border"></div>
               <div class="title-row">LAST WEEK</div>
-              <div class="today-first">
+              <div class="notification-row">
                 <div class="svg-box8 bkg-green">
                   <svg width="16" height="16">
                     <use href="./images/icon.svg#icon-smartphone"></use>
                   </svg>
                 </div>
-                <div class="today-text">
+                <div class="notification-text">
                   Richard Jones has purhased a blue T-Shirt for
                   <span>$79.00</span>
                 </div>
               </div>
               <div class="border"></div>
-              <div class="today-first">
+              <div class="notification-row">
                 <div class="svg-box8 bkg-violet">
                   <svg width="16" height="16">
                     <use href="./images/icon.svg#icon-smartphone"></use>
                   </svg>
                 </div>
-                <div class="today-text">
+                <div class="notification-text">
                   Richard Jones has purhased a blue T-Shirt for
                   <span>$79.00</span>
                 </div>
@@ -500,5 +516,6 @@
         </section>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>

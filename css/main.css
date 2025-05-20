@@ -1,4 +1,5 @@
 body {
+  font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
   background: rgb(201, 222, 233);
@@ -52,7 +53,7 @@ header {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  margin-left: 8px;
+  margin-left: 16px;
   gap: 4px;
 }
 
@@ -66,26 +67,33 @@ header {
   width: 32px;
 }
 
-.navigation__icon {
-}
-
 .list__icon {
   display: flex;
   margin: 0;
-  gap: 4px;
-}
-
-.item:hover {
-  background: rgb(135, 213, 135);
+  gap: 8px;
+  height: 32px;
 }
 
 .item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
+}
+
+.item:hover {
+  background: rgb(135, 213, 135);
+}
+
+.list__icon .navigation-icon {
+  color: black;
+  /* font-size: 24px; */
+}
+
+.navigation-icon:hover {
+  color: white;
 }
 
 .sidebar-section {
@@ -95,7 +103,7 @@ header {
 }
 
 .sidebar {
-  height: 80vh;
+  height: calc(100vh - 48px - 64px);
   overflow: auto;
   position: sticky;
   top: 5%;
@@ -105,16 +113,34 @@ header {
   width: 180px;
 }
 
+.pages__item .submenu-icon {
+  font-size: 16px;
+  margin-left: 48px;
+}
+
+.home__list .sidebar-icon {
+  font-size: 16px;
+}
+
+.ui-components__list .sidebar-icon {
+  font-size: 16px;
+}
+
+.pages__item .sidebar-icon {
+  font-size: 16px;
+}
+
 .home__list {
   padding-left: 16px;
 }
 
 .home-item {
   font-size: 14px;
-  margin: 16px 0 16px 16px;
+  margin: 16px 8px;
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 8px 0px 8px 16px;
 }
 
 .ui-components__list {
@@ -123,27 +149,45 @@ header {
 
 .ui-components__item {
   font-size: 14px;
-  margin: 16px 0 16px 16px;
+  margin: 16px 8px;
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 8px 0px 8px 16px;
 }
 
 .pages__list {
   padding-left: 16px;
 }
 
-.pages__item {
+.pages__row {
   font-size: 14px;
-  margin: 16px 0 16px 16px;
+  margin: 16px 24px;
   display: flex;
   align-items: center;
   gap: 8px;
+  /* padding: 8px 0px 8px 16px; */
 }
-li:hover {
+
+/* .pages__item {
+  font-size: 14px;
+  margin: 16px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0px 8px 16px;
+} */
+
+li:active {
   cursor: pointer;
   color: rgb(135, 213, 135);
   fill: rgb(135, 213, 135);
+}
+
+li:hover {
+  background: rgba(192, 192, 192, 0.191);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .content {
@@ -245,40 +289,45 @@ li:hover {
   margin-bottom: 16px;
 }
 
-.box5__header {
-  display: flex;
-  padding: 8px 0;
-  border-bottom: 1px solid #ccc;
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.box5__row {
-  display: flex;
-  padding: 8px 0;
-  border-bottom: 1px solid #ccc;
+thead {
+  text-align: left;
 }
 
-.box5__header > div {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+tr > th {
+  font-weight: 500;
+}
+tr > td {
+  font-weight: 200;
 }
 
-.box5__row > div {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+table th,
+table td {
+  padding: 6px 0px;
+  border-bottom: 2px solid #ccc;
 }
 
-.box5__row > div:first-child,
-.box5__header > div:first-child {
-  flex: 0 0 auto;
-  margin-left: 16px;
+th tr th tr th:first-child {
+  padding-left: 16px;
 }
 
-.box5__svg {
-  fill: green;
+tr td:last-child {
+  padding-left: 8px;
+  padding-top: 8px;
+}
+
+.search-icon {
+  color: #22c55e;
+}
+
+td > img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
 }
 
 .pagination {
@@ -286,11 +335,6 @@ li:hover {
   justify-content: center;
   gap: 8px;
   margin-top: 16px;
-}
-
-img {
-  width: 64px;
-  height: 48px;
 }
 
 .page-number {
@@ -321,7 +365,7 @@ img {
 }
 
 .box7-title div {
-  margin: 0 16px 0 16px;
+  margin: 0 16px 0 0px;
 }
 
 .product-row {
@@ -329,6 +373,7 @@ img {
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
+  margin-left: 8px;
 }
 
 .product-info {
@@ -418,10 +463,10 @@ img {
   margin: 16px 0px 16px 16px;
 }
 
-.today-first {
+.notification-row {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 16px;
 }
 
 .svg-box8 {
@@ -460,8 +505,9 @@ img {
   --bkg-fill: rgb(123, 0, 255);
 }
 
-.today-text span {
+.notification-text span {
   color: green;
+  font-weight: 600;
 }
 
 .border {
@@ -483,4 +529,30 @@ footer {
 .footer-title span {
   margin-top: 16px;
   color: green;
+}
+
+/* submenu */
+
+.pages__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu {
+  display: none;
+  list-style: none;
+  margin-left: 48px;
+  padding: 0;
+  width: 100%;
+}
+
+/* Елементи сабменю */
+.submenu__item {
+  font-size: 13px;
+  padding: 6px 0;
+}
+
+/* Коли li має клас .open — показати меню */
+.pages__item.open .submenu {
+  display: block;
 }
