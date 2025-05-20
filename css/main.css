@@ -162,29 +162,23 @@ header {
 
 .pages__row {
   font-size: 14px;
-  margin: 16px 24px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  /* padding: 8px 0px 8px 16px; */
-}
-
-/* .pages__item {
-  font-size: 14px;
-  margin: 16px 8px;
+  margin: 8px 8px;
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px 0px 8px 16px;
-} */
-
-li:active {
-  cursor: pointer;
-  color: rgb(135, 213, 135);
-  fill: rgb(135, 213, 135);
 }
 
-li:hover {
+.pages__item.active > .pages__row,
+.ui-components__item.active,
+.home-item.active {
+  color: rgb(135, 213, 135);
+}
+
+.home-item:hover,
+.ui-components__item:hover,
+.pages__row:hover,
+.submenu__item:hover {
   background: rgba(192, 192, 192, 0.191);
   border-radius: 5px;
   cursor: pointer;
@@ -546,7 +540,6 @@ footer {
   width: 100%;
 }
 
-/* Елементи сабменю */
 .submenu__item {
   font-size: 13px;
   padding: 6px 0;

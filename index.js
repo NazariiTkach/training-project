@@ -6,4 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
       event.stopPropagation(); // Щоб уникнути небажаного поширення
       menuItem.classList.toggle("open");
     });
+});
+  
+  
+document.addEventListener("DOMContentLoaded", () => {
+    // Вибираємо всі li у sidebar, які можуть бути активними
+    const menuItems = document.querySelectorAll(
+      ".pages__item, .ui-components__item, .home-item"
+    );
+  
+    menuItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        // Зняти active з усіх
+        menuItems.forEach((i) => i.classList.remove("active"));
+        // Додати active на клікнутий
+        item.classList.add("active");
+      });
+    });
   });
