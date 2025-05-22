@@ -5,6 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
     submenuIcon.addEventListener("click", function (event) {
       event.stopPropagation(); // Щоб уникнути небажаного поширення
       menuItem.classList.toggle("open");
+
+      // зміна іконки при відкритті/закритті submenu
+
+      if (menuItem.classList.contains("open")) {
+        submenuIcon.textContent = "keyboard_arrow_up";
+      } else {
+        submenuIcon.textContent = "keyboard_arrow_down";
+      }
     });
 });
   
@@ -23,4 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("active");
       });
     });
+});
+  
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleIcon = document.querySelector(".menu__icon");
+  toggleIcon.addEventListener("click", () => {
+    document.body.classList.toggle("sidebar-hidden");
   });
+});

@@ -2,7 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   padding: 0;
   margin: 0;
-  background: rgb(201, 222, 233);
+  background: rgb(241, 245, 249);
   height: 100vh;
 }
 
@@ -42,6 +42,7 @@ header {
   display: flex;
   align-items: center;
   padding: 8px 16px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 1);
 }
 
 .menu__icon {
@@ -100,6 +101,8 @@ header {
   margin-top: 72px;
   flex-shrink: 0;
   position: fixed;
+  transition: margin-left 0.5s linear;
+  z-index: 100;
 }
 
 .sidebar {
@@ -110,12 +113,22 @@ header {
   background: white;
   border-radius: 10px;
   padding-top: 16px;
-  width: 180px;
+  width: 235px;
+  overflow-x: hidden;
+  transition: transform 0.5s linear;
+}
+
+.sidebar-hidden .sidebar-section {
+  margin-left: -280px;
+}
+
+.sidebar-hidden .content-box {
+  margin-left: 0;
 }
 
 .pages__item .submenu-icon {
   font-size: 16px;
-  margin-left: 48px;
+  margin-left: 82px;
 }
 
 .home__list .sidebar-icon {
@@ -193,7 +206,8 @@ header {
 
 .content-box {
   flex: 1;
-  margin: 48px 0px 0px 200px;
+  margin: 48px 0px 0px 262px;
+  transition: margin-left 0.5s linear;
 }
 
 .box__upper,
@@ -302,7 +316,7 @@ tr > td {
 table th,
 table td {
   padding: 6px 0px;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 th tr th tr th:first-child {
@@ -470,7 +484,7 @@ td > img {
   width: 32px;
   height: 32px;
   background: var(--bkg-color);
-  fill: var(--bkg-fill);
+  color: var(--bkg-fill);
   border-radius: 50%;
 }
 
@@ -504,16 +518,16 @@ td > img {
   font-weight: 600;
 }
 
-.border {
+/* .border {
   border: 1px solid #d0d0d0;
   margin: 8px 0px;
-}
+} */
 
 footer {
   display: flex;
   justify-content: center;
   margin: 24px 0px;
-  border-top: 2px solid #d0d0d0;
+  border-top: 1px solid #d0d0d0;
 }
 
 .footer-title {
@@ -533,19 +547,34 @@ footer {
 }
 
 .submenu {
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s linear;
+  /* display: none; */
   list-style: none;
-  margin-left: 48px;
+  margin-left: 32px;
   padding: 0;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .submenu__item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   font-size: 13px;
   padding: 6px 0;
+  width: 132px;
 }
 
 /* Коли li має клас .open — показати меню */
 .pages__item.open .submenu {
+  max-height: 100px;
   display: block;
 }
+
+/* .submenu-icon {
+  transition: transform 0.3s ease;
+}
+.pages__item.open .submenu-icon {
+  transform: rotate(180deg);
+} */
