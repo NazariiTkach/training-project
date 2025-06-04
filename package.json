@@ -1,0 +1,18 @@
+{
+  "name": "training-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "express": "^5.1.0",
+    "livereload": "^0.9.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
