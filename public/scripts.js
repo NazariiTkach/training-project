@@ -11,10 +11,10 @@ async function loadProducts() {
   
         const imgTd = document.createElement('td');
         const img = document.createElement('img');
-        img.src = product.image_url; // заміни на потрібне зображення
+        img.src = product.image_url; // replace with the correct image
         img.alt = product.name;
         imgTd.appendChild(img);
-        console.log('Image file name:', product.image);
+      
         
   
         const nameTd = document.createElement('td');

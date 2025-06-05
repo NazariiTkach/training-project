@@ -1,5 +1,5 @@
 
-const pool = require('./db'); // або './db' - шлях до твого db.js
+const pool = require('./db'); // або './db' - the path to yours db.js
 
 async function initDB() {
   try {
