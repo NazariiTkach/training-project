@@ -1,0 +1,51 @@
+# System / IDE junk
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+*.pid
+*.pid.lock
+
+# Dependency directories
+# node_modules/
+jspm_packages/
+
+# Build output
+build/
+dist/
+
+# Environment variables
+.env
+.env.test
+
+# Cache
+.eslintcache
+.nyc_output
+.parcel-cache
+.cache/
+coverage/
+*.tsbuildinfo
+
+# Yarn & npm
+.yarn-integrity
+.rpt2_cache/
+.rts2_cache_*/
+
+# Output of 'npm pack'
+*.tgz
+
+# REPL history
+.node_repl_history
+
+# Optional
+*.seed
+
+# Docker (якщо використовуєш)
+data/
+*.tar
