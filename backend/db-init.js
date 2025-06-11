@@ -1,5 +1,5 @@
 
-const pool = require('./db'); // або './db' - the path to yours db.js
+const pool = require('./db'); 
 
 async function initDB() {
   try {
@@ -22,9 +22,9 @@ async function initDB() {
       ON CONFLICT DO NOTHING
     `);
 
-    console.log('✅ Таблиця products створена і дані додані');
+    console.log('✅ Products table created and data added');
   } catch (err) {
-    console.error('❌ Помилка ініціалізації БД:', err);
+    console.error('❌ Database initialization error:', err);
   } finally {
     await pool.end();
   }

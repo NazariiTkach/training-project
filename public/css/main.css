@@ -90,7 +90,6 @@ header {
 
 .list__icon .navigation-icon {
   color: black;
-  /* font-size: 24px; */
 }
 
 .navigation-icon:hover {
@@ -293,6 +292,24 @@ header {
   font-weight: bold;
 }
 
+.title-container {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+}
+
+.add-products {
+  border-radius: 5px;
+  border: 1px black solid;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.add-products:hover {
+  background: rgb(135, 213, 135);
+  cursor: pointer;
+}
+
 .box5__title {
   margin-bottom: 16px;
 }
@@ -330,6 +347,17 @@ tr td:last-child {
 
 .search-icon {
   color: #22c55e;
+}
+
+.delete-button {
+  border: 1px solid black;
+  border-radius: 5px;
+  background: white;
+  transition: background-color 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: rgb(135, 213, 135);
 }
 
 td > img {
@@ -518,11 +546,6 @@ td > img {
   font-weight: 600;
 }
 
-/* .border {
-  border: 1px solid #d0d0d0;
-  margin: 8px 0px;
-} */
-
 footer {
   display: flex;
   justify-content: center;
@@ -539,8 +562,6 @@ footer {
   color: green;
 }
 
-/* submenu */
-
 .pages__item {
   display: flex;
   flex-direction: column;
@@ -550,11 +571,9 @@ footer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s linear;
-  /* display: none; */
   list-style: none;
   margin-left: 32px;
   padding: 0;
-  /* width: 100%; */
 }
 
 .submenu__item {
@@ -566,15 +585,30 @@ footer {
   width: 132px;
 }
 
-/* Коли li має клас .open — показати меню */
 .pages__item.open .submenu {
   max-height: 100px;
   display: block;
 }
 
-/* .submenu-icon {
-  transition: transform 0.3s ease;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
 }
-.pages__item.open .submenu-icon {
-  transform: rotate(180deg);
-} */
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}

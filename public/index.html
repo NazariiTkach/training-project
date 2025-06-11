@@ -21,7 +21,6 @@
       }
     </style>
   </head>
-  <script src="http://localhost:35729/livereload.js?snipver=1"></script>
   <body>
     <header>
       <nav class="header__navigation">
@@ -279,7 +278,10 @@
         <section class="boxeses">
           <div class="box__down">
             <div class="box5">
-              <div class="box5__title">Recent Sales</div>
+              <div class="title-container">
+                <div class="box5__title">Recent Sales</div>
+                <button class="add-products">+</button>
+              </div>
               <table>
                 <thead>
                   <tr>
@@ -287,6 +289,7 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>View</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody id="products-table-body">
@@ -345,10 +348,6 @@
               <div class="pagination">
                 <a href="#" class="page-arrow">&laquo;</a>
                 <a href="#" class="page-number active">1</a>
-                <a href="#" class="page-number">2</a>
-                <a href="#" class="page-number">3</a>
-                <a href="#" class="page-number">4</a>
-                <a href="#" class="page-number">5</a>
                 <a href="#" class="page-arrow">&raquo;</a>
               </div>
             </div>
@@ -485,7 +484,6 @@
                 </div>
                 <div class="notification-text">
                   Jane Davis has posted a new questions about your product.
-                  <!-- <span>$79.00</span> -->
                 </div>
               </div>
               <hr />
@@ -517,6 +515,23 @@
         </section>
       </div>
     </main>
+    <div id="product-modal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Add New Product</h2>
+        <form id="product-form">
+          <input type="text" name="name" placeholder="Product Name" required />
+          <input
+            type="number"
+            name="price"
+            step="0.01"
+            placeholder="Price"
+            required
+          />
+          <button type="submit">Save</button>
+          <button type="button" id="close-modal">Cancel</button>
+        </form>
+      </div>
+    </div>
     <script src="./index.js"></script>
     <script src="./scripts.js"></script>
   </body>

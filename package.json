@@ -4,12 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-     "start": "node backend/server.js",
-     "dev": "nodemon backend/server.js",
-     "db:init": "node backend/db-init.js"
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "db:init": "node backend/db-init.js"
   },
   "dependencies": {
     "connect-livereload": "^0.6.1",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "livereload": "^0.9.3",
     "pg": "^8.16.0"

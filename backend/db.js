@@ -1,10 +1,10 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: 'macbook',           // або інше ім’я твого macOS користувача
+  user: 'macbook',          
   host: 'localhost',
   database: 'training_project_db',
-  password: '',              // якщо немає — залишай порожнім
+  password: '',              
   port: 5432,
 });
 
