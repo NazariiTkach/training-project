@@ -1,7 +1,6 @@
+const pool = require('./db');
 
-const pool = require('./db'); 
-
-async function initDB() {
+async function initSchema() {
   try {
     await pool.query(`
       CREATE TABLE IF NOT EXISTS products (
@@ -11,7 +10,14 @@ async function initDB() {
         image_url VARCHAR(255)
       )
     `);
+    console.log('✅ Schema created');
+  } catch (err) {
+    console.error('❌ Schema creation error:', err);
+  }
+}
 
+async function seedData() {
+  try {
     await pool.query(`
       INSERT INTO products (name, price, image_url) VALUES
         ('Bamboo Watch', 65.00, 'bamboo-watch.jpg'),
@@ -21,13 +27,16 @@ async function initDB() {
         ('Bracelet', 15.00, 'braclet.jpg')
       ON CONFLICT DO NOTHING
     `);
-
-    console.log('✅ Products table created and data added');
+    console.log('✅ Sample data inserted');
   } catch (err) {
-    console.error('❌ Database initialization error:', err);
-  } finally {
-    await pool.end();
+    console.error('❌ Data insert error:', err);
   }
+}
+
+async function initDB() {
+  await initSchema();
+  await seedData();
+  await pool.end();
 }
 
 initDB();
