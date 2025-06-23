@@ -45,7 +45,7 @@ function setupSidebarToggle() {
 }
 
 function setupModalControls() {
-  const openBtn = document.querySelector(".add-products");
+  const openBtn = document.querySelector(".add-product");
   const closeBtn = document.getElementById("close-modal");
   const modal = document.getElementById("product-modal");
 
@@ -93,6 +93,4 @@ function setupProductForm() {
     }
   });
 }
-
-
 
