@@ -90,7 +90,6 @@ header {
 
 .list__icon .navigation-icon {
   color: black;
-  /* font-size: 24px; */
 }
 
 .navigation-icon:hover {
@@ -293,8 +292,27 @@ header {
   font-weight: bold;
 }
 
-.box5__title {
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 16px;
+}
+
+.add-product {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5px;
+  padding: 0 4px 0 0;
+  border: 1px black solid;
+  background-color: rgba(232, 232, 232, 0.431);
+  transition: background-color 0.2s;
+}
+
+.add-product:hover {
+  background: rgb(200, 201, 200);
+  cursor: pointer;
 }
 
 table {
@@ -330,6 +348,23 @@ tr td:last-child {
 
 .search-icon {
   color: #22c55e;
+}
+
+.delete-button {
+  border: 1px solid rgba(231, 37, 131, 0.489);
+  border-radius: 50%;
+  background: white;
+  transition: background-color 0.2s ease;
+  margin-left: 8px;
+}
+
+.delete-icon {
+  padding: 3px 0;
+  color: rgba(255, 0, 0, 0.588);
+}
+
+.delete-button:hover {
+  background-color: rgba(240, 175, 223, 0.458);
 }
 
 td > img {
@@ -518,11 +553,6 @@ td > img {
   font-weight: 600;
 }
 
-/* .border {
-  border: 1px solid #d0d0d0;
-  margin: 8px 0px;
-} */
-
 footer {
   display: flex;
   justify-content: center;
@@ -539,8 +569,6 @@ footer {
   color: green;
 }
 
-/* submenu */
-
 .pages__item {
   display: flex;
   flex-direction: column;
@@ -550,11 +578,9 @@ footer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s linear;
-  /* display: none; */
   list-style: none;
   margin-left: 32px;
   padding: 0;
-  /* width: 100%; */
 }
 
 .submenu__item {
@@ -566,15 +592,141 @@ footer {
   width: 132px;
 }
 
-/* Коли li має клас .open — показати меню */
 .pages__item.open .submenu {
   max-height: 100px;
   display: block;
 }
 
-/* .submenu-icon {
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.hidden {
+  display: none;
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.product-form input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid rgba(130, 126, 126, 0.772);
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+  border-radius: 10px;
+}
+
+.submit-button {
+  padding: 4px 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(178, 235, 183, 0.456);
+}
+
+.submit-button:hover {
+  background-color: rgb(178, 235, 183);
+}
+.close-button {
+  padding: 4px 24px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(221, 221, 221, 0);
+}
+
+.close-button:hover {
+  background-color: rgba(221, 221, 221, 0.847);
+}
+
+.actions-cell {
+  text-align: center;
+}
+
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 300px;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: none;
+  cursor: pointer;
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.btn.danger {
+  background: #e74c3c;
+  color: rgb(255, 255, 255);
+}
+
+.hidden {
+  display: none;
+}
+
+.header-cell {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rotate {
+  transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
-.pages__item.open .submenu-icon {
-  transform: rotate(180deg);
-} */
+
+.sort-icon {
+  cursor: pointer;
+}
