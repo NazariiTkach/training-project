@@ -1,3 +1,4 @@
+const API_URL = 'https://685d8113769de2bf0860e4b1.mockapi.io/products';
 let currentPage = 1;
 const productsPerPage = 5;
 let allProducts = [];
@@ -11,7 +12,7 @@ window.onload = () => {
 
 async function loadProducts() {
   try {
-    const response = await fetch('/api/products');
+    const response = await fetch(API_URL);
     allProducts = await response.json();
     if (currentPage > getTotalPages() && currentPage > 1) currentPage = getTotalPages();
     render();
@@ -101,7 +102,7 @@ function renderPagination() {
 async function handleDelete(productId, productName) {
   if (await showConfirm(`Are you sure you want to delete "${productName}"?`)) {
     try {
-      const res = await fetch(`/api/products/${productId}`, { method: 'DELETE' });
+      const res = await fetch(`${API_URL}/${productId}`, { method: 'DELETE' });
       if (!res.ok) throw new Error('Error deleting');
       await loadProducts();
     } catch (err) {

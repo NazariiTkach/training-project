@@ -77,7 +77,7 @@ function setupProductForm() {
     };
 
     try {
-      const res = await fetch("/api/products", {
+      const res = await fetch("https://685d8113769de2bf0860e4b1.mockapi.io/products", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newProduct),
